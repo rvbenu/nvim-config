@@ -18,12 +18,18 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- import your plugins
+    -- Import your plugins
     { import = "plugins" },
+    -- Add vimtex properly inside the setup table
+    {
+      "lervag/vimtex",
+      ft = "tex",
+      config = function()
+        vim.g.vimtex_view_method = "skim" -- Change to "zathura" if you're on Linux
+        vim.g.vimtex_compiler_method = "latexmk"
+      end
+    }
   },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
   checker = { enabled = true },
 })

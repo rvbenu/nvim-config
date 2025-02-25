@@ -1,6 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "//"
 
+-- LaTeX
+vim.api.nvim_set_keymap("n", "<leader>lc", ":!pdflatex %<CR>", { noremap = true, silent = true })
+
+
 -- vim.keymap.set({mode}, {lhs}, {rhs}, {opts})
 
 vim.keymap.set({"n", "v"}, "<Leader>y", '"+y', {noremap = true, silent = true})
