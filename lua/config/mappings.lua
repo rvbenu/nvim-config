@@ -1,29 +1,23 @@
--- Setting the Leader Keys (Shortcut Prefix)
+-- Key Mapping Format
+-- `vim.keymap.set({mode}, {lhs}, {rhs}, {opts})`
 
--- `Leader` is a special key used to define shortcuts.
--- The default leader in Neovim is `\`, but we change it to **space (" ")** for easier access.
+
+
+
 vim.g.mapleader = " "
 
 -- `LocalLeader` is similar to `Leader`, but used for buffer-local shortcuts.
--- We set it to `//` (can be changed based on preference).
 vim.g.maplocalleader = "//"
 
--- Key Mapping Format
-
--- `vim.keymap.set({mode}, {lhs}, {rhs}, {opts})`
--- - `{mode}` → Which modes the keymap applies to (`"n"`, `"v"`, `"i"`, etc.).
--- - `{lhs}` → The key combination to trigger the mapping.
--- - `{rhs}` → The action/command to execute.
--- - `{opts}` → Extra options (e.g., `noremap = true`, `silent = true`).
 
 -- Copy to System Clipboard (Yank to `+` Register)
 vim.keymap.set({"n", "v"}, "<Leader>y", '"+y', { noremap = true, silent = true })
 
 -- Open File Explorer (`netrw`)
-vim.keymap.set('n', '<leader>e', ':Explore<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>e', ':Explore<CR>', { noremap = true, silent = true })
 
 
--- Moving Between Split Windows (Pane Navigation)
+-- Moving Between Split Windows 
 
 -- Navigate **left** to the next split window
 vim.keymap.set('n', '<leader>h', '<C-w>h', { noremap = true, silent = true })  
