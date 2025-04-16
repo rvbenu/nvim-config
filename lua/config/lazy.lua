@@ -31,7 +31,6 @@ end
 -- Prepend lazy.nvim to the runtime path (`rtp`), so Neovim can find and use it.
 vim.opt.rtp:prepend(lazypath)
 
-
 -- Setup `lazy.nvim`. 
 require("lazy").setup({
   spec = {

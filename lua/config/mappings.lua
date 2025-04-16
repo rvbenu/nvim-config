@@ -16,6 +16,8 @@ vim.keymap.set({"n", "v"}, "<Leader>y", '"+y', { noremap = true, silent = true }
 -- Open File Explorer (`netrw`)
 vim.keymap.set('n', '<Leader>e', ':Explore<CR>', { noremap = true, silent = true })
 
+-- Re-do 
+vim.keymap.set('n', '<Leader>u', '<C-r>', { noremap = true, silent = true})
 
 -- Moving Between Split Windows 
 

@@ -34,11 +34,11 @@ return {
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(event)
                     local opts = { buffer = event.buf }
-                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-                    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-                    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- Go to definition
+                    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- Show Hover documentation
+                    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- Remane
+                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts) -- Show code actions
+                    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts) -- Show references
                 end,
             })
         end,

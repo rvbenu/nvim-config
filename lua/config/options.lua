@@ -4,7 +4,7 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-
+vim.opt.scrolloff = 5
 -- LSP error/warning signs appeared to the left of line numbers, shifting the layout unpleasantly. 
 -- Fix this by having the sign column always active. 
 vim.opt.signcolumn = "yes"
